@@ -2,7 +2,7 @@ apiVersion: platform/v1
 kind: Package
 metadata:
   name: task-demo-job
-  version: 0.1.1
+  version: 0.1.2
 spec:
   runtime: task/v1
   entrypoint:
