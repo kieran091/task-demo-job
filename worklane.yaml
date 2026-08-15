@@ -2,15 +2,18 @@ apiVersion: platform/v1
 kind: Package
 metadata:
   name: task-demo-job
-  version: 0.1.2
+  version: 0.2.0
 spec:
   runtime: task/v1
   entrypoint:
     type: python
     handler: ./app/job.py
   build:
-    language: python
-    builder: buildx
+    strategy: dockerfile
+    context: .
+    dockerfile: Dockerfile
+    platforms:
+      - linux/amd64
   configSchema:
     - name: TASK_COUNT
       type: integer
