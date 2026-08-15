@@ -1,0 +1,21 @@
+apiVersion: platform/v1
+kind: Package
+metadata:
+  name: task-demo-job
+  version: 0.1.0
+spec:
+  runtime: task/v1
+  entrypoint:
+    type: python
+    handler: app/job.py
+  build:
+    language: python
+    builder: docker
+  configSchema:
+    - name: TASK_COUNT
+      type: integer
+      mutable: true
+  resources:
+    cpuMillis: 100
+    memoryBytes: 134217728
+  restartPolicy: OnFailure
