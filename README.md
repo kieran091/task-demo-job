@@ -13,4 +13,4 @@ python3 app/job.py
 TASK_COUNT=5 python3 app/job.py
 ```
 
-构建入口由根目录的 `worklane.yaml` 声明，使用 `app/job.py` 和 Dockerfile。部署到 Job 时，Worklane 应引用构建生成的不可变 Package Version。
+构建入口由根目录的 `worklane.yaml` 声明，使用 `./app/job.py` 和 Dockerfile。部署到 Job 时，Worklane 应引用构建生成的不可变 Package Version。

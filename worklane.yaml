@@ -7,7 +7,7 @@ spec:
   runtime: task/v1
   entrypoint:
     type: python
-    handler: app/job.py
+    handler: ./app/job.py
   build:
     language: python
     builder: docker
