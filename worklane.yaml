@@ -10,7 +10,7 @@ spec:
     handler: ./app/job.py
   build:
     language: python
-    builder: docker
+    builder: buildx
   configSchema:
     - name: TASK_COUNT
       type: integer
